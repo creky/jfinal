@@ -18,7 +18,7 @@ package com.jfinal.kit;
 
 import com.jfinal.core.Const;
 import com.jfinal.log.Log;
-import javax.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 

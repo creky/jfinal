@@ -25,14 +25,13 @@ import java.awt.geom.QuadCurve2D;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.util.concurrent.ThreadLocalRandom;
-import javax.imageio.ImageIO;
-import javax.servlet.ServletOutputStream;
-import javax.servlet.http.Cookie;
+import jakarta.imageio.ImageIO;
 import com.jfinal.core.Controller;
 import com.jfinal.kit.LogKit;
 import com.jfinal.kit.StrKit;
 import com.jfinal.render.Render;
 import com.jfinal.render.RenderException;
+import jakarta.servlet.http.Cookie;
 
 /**
  * CaptchaRender.

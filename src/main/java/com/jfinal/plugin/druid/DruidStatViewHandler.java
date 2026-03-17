@@ -17,10 +17,11 @@
 package com.jfinal.plugin.druid;
 
 import java.io.IOException;
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import com.alibaba.druid.support.http.StatViewServlet;
+
+import com.alibaba.druid.support.jakarta.StatViewServlet;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 import com.jfinal.handler.Handler;
 import com.jfinal.kit.HandlerKit;
 import com.jfinal.kit.StrKit;

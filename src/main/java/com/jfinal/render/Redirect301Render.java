@@ -16,7 +16,7 @@
 
 package com.jfinal.render;
 
-import javax.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpServletResponse;
 
 /**
  * Redirect301Render.

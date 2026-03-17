@@ -16,7 +16,7 @@
 
 package com.jfinal.plugin.druid;
 
-import javax.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletRequest;
 
 /**
  * 授权

@@ -18,11 +18,11 @@ package com.jfinal.render;
 
 import java.io.File;
 import java.util.Locale;
-import javax.servlet.ServletContext;
 import com.jfinal.config.Constants;
 import com.jfinal.kit.LogKit;
 import com.jfinal.kit.PathKit;
 import com.jfinal.template.Engine;
+import jakarta.servlet.ServletContext;
 
 /**
  * RenderManager.

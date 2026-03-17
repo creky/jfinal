@@ -16,8 +16,8 @@
 
 package com.jfinal.ext.kit;
 
-import javax.servlet.ServletContextEvent;
-import javax.servlet.ServletContextListener;
+import jakarta.servlet.ServletContextEvent;
+import jakarta.servlet.ServletContextListener;
 import com.jfinal.plugin.activerecord.ModelRecordElResolver;
 
 /**

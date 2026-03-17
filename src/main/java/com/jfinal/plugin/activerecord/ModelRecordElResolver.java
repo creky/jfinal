@@ -19,11 +19,7 @@ package com.jfinal.plugin.activerecord;
 import java.beans.FeatureDescriptor;
 import java.lang.reflect.Method;
 import java.util.Iterator;
-import javax.el.ELContext;
-import javax.el.ELResolver;
-import javax.servlet.ServletContext;
-import javax.servlet.jsp.JspApplicationContext;
-import javax.servlet.jsp.JspFactory;
+import jakarta.servlet.ServletContext;
 import com.jfinal.kit.StrKit;
 
 /**

@@ -17,8 +17,8 @@
 package com.jfinal.core;
 
 import java.util.function.BiFunction;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 import com.jfinal.config.Constants;
 import com.jfinal.core.paragetter.JsonRequest;
 import com.jfinal.aop.Invocation;

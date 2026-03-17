@@ -23,7 +23,7 @@ import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
 import java.util.Properties;
-import javax.servlet.ServletContext;
+import jakarta.servlet.ServletContext;
 import com.jfinal.core.JFinal;
 import freemarker.template.Configuration;
 import freemarker.template.ObjectWrapper;

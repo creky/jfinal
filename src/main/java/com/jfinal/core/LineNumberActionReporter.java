@@ -5,7 +5,7 @@ import javassist.ClassPool;
 import javassist.CtMethod;
 import javassist.NotFoundException;
 
-import javax.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletRequest;
 import java.io.IOException;
 import java.util.Date;
 

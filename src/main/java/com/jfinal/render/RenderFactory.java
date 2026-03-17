@@ -17,7 +17,7 @@
 package com.jfinal.render;
 
 import java.io.File;
-import javax.servlet.ServletContext;
+import jakarta.servlet.ServletContext;
 import com.jfinal.config.Constants;
 import com.jfinal.template.Engine;
 

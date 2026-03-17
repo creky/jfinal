@@ -18,7 +18,7 @@ package com.jfinal.ext.kit;
 
 import java.security.SecureRandom;
 import java.util.Random;
-import javax.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletRequest;
 
 /**
  * SessionIdKit.

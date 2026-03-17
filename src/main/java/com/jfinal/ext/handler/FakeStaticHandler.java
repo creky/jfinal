@@ -16,8 +16,8 @@
 
 package com.jfinal.ext.handler;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 import com.jfinal.handler.Handler;
 import com.jfinal.kit.HandlerKit;
 import com.jfinal.kit.StrKit;

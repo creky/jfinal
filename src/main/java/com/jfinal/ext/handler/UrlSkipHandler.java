@@ -17,8 +17,8 @@
 package com.jfinal.ext.handler;
 
 import java.util.regex.Pattern;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 import com.jfinal.handler.Handler;
 import com.jfinal.kit.StrKit;
 

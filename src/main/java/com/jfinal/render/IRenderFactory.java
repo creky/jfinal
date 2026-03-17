@@ -17,9 +17,9 @@
 package com.jfinal.render;
 
 import java.io.File;
-import javax.servlet.ServletContext;
 import com.jfinal.config.Constants;
 import com.jfinal.template.Engine;
+import jakarta.servlet.ServletContext;
 
 /**
  * IRenderFactory.

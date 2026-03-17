@@ -19,7 +19,7 @@ package com.jfinal.template.ext.spring;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
-import javax.servlet.ServletContext;
+import jakarta.servlet.ServletContext;
 import org.springframework.web.servlet.View;
 import org.springframework.web.servlet.view.AbstractTemplateViewResolver;
 import com.jfinal.kit.StrKit;

@@ -16,8 +16,8 @@
 
 package com.jfinal.core;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 import com.jfinal.kit.StrKit;
 // import com.jfinal.log.Log;
 import com.jfinal.render.Render;

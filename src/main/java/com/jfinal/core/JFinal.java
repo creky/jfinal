@@ -17,7 +17,6 @@
 package com.jfinal.core;
 
 import java.util.List;
-import javax.servlet.ServletContext;
 import com.jfinal.config.Constants;
 import com.jfinal.config.JFinalConfig;
 import com.jfinal.handler.Handler;
@@ -30,6 +29,7 @@ import com.jfinal.server.IServer;
 import com.jfinal.token.ITokenCache;
 import com.jfinal.token.TokenManager;
 import com.jfinal.upload.UploadConfig;
+import jakarta.servlet.ServletContext;
 
 /**
  * JFinal
