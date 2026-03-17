@@ -23,10 +23,11 @@ import java.util.Enumeration;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+import com.jfinal.cos.multipart.DefaultFileRenamePolicy;
+import com.jfinal.cos.multipart.FileRenamePolicy;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletRequestWrapper;
-import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
-import com.oreilly.servlet.multipart.FileRenamePolicy;
 
 /**
  * MultipartRequest.
@@ -51,7 +52,7 @@ public class MultipartRequest extends HttpServletRequestWrapper {
 	};
 
 	private List<UploadFile> uploadFiles;
-	private com.oreilly.servlet.MultipartRequest multipartRequest;
+	private com.jfinal.cos.MultipartRequest multipartRequest;
 
 	// 非法上传文件
 	private String illegalUploadFile;
@@ -112,7 +113,7 @@ public class MultipartRequest extends HttpServletRequestWrapper {
         uploadFiles = new ArrayList<UploadFile>();
 
 		try {
-			multipartRequest = new  com.oreilly.servlet.MultipartRequest(request, uploadPath, maxPostSize, encoding, fileRenamePolicy);
+			multipartRequest = new  com.jfinal.cos.MultipartRequest(request, uploadPath, maxPostSize, encoding, fileRenamePolicy);
 			Enumeration files = multipartRequest.getFileNames();
 			while (files.hasMoreElements()) {
 				String name = (String)files.nextElement();
@@ -132,8 +133,8 @@ public class MultipartRequest extends HttpServletRequestWrapper {
 			// 处理非法上传。存在非法上传文件，无条件删除所有已上传文件
 			handleIllegalUpload();
 
-		} catch (com.oreilly.servlet.multipart.ExceededSizeException e) {
-			throw new ExceededSizeException(e);
+		} catch (ExceededSizeException e) {
+			throw e;
 		} catch (IOException e) {
 			throw new RuntimeException(e);
 		}

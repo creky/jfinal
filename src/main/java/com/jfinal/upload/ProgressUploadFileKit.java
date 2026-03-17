@@ -1,13 +1,16 @@
 package com.jfinal.upload;
 
 import com.jfinal.kit.StrKit;
-import org.apache.commons.fileupload.FileItem;
-import org.apache.commons.fileupload.FileItemFactory;
-import org.apache.commons.fileupload.ProgressListener;
-import org.apache.commons.fileupload.disk.DiskFileItemFactory;
-import org.apache.commons.fileupload.servlet.ServletFileUpload;
+import org.apache.commons.fileupload2.core.FileItem;
+import org.apache.commons.fileupload2.core.FileItemFactory;
+import org.apache.commons.fileupload2.core.ProgressListener;
+import org.apache.commons.fileupload2.core.DiskFileItemFactory;
 import jakarta.servlet.http.HttpServletRequest;
+import org.apache.commons.fileupload2.jakarta.servlet6.JakartaServletFileUpload;
+
 import java.io.File;
+import java.nio.file.FileSystems;
+import java.nio.file.Path;
 import java.util.List;
 import java.util.function.Consumer;
 
@@ -18,7 +21,7 @@ import java.util.function.Consumer;
 public class ProgressUploadFileKit {
     public static UploadFile get(HttpServletRequest request,String parameterName, String uploadPath, Consumer<UploadProgress> callback){
         // 检查请求是否包含文件上传
-        if (!ServletFileUpload.isMultipartContent(request)) {
+        if (!JakartaServletFileUpload.isMultipartContent(request)) {
             return null;
         }
         String finalUploadPath = getFinalPath(uploadPath);
@@ -26,9 +29,9 @@ public class ProgressUploadFileKit {
         createNotExistsFolder(finalUploadPath);
         UploadFile progressFile = null;
         // 创建文件项工厂
-        FileItemFactory factory = new DiskFileItemFactory();
+        FileItemFactory factory = DiskFileItemFactory.builder().get();
         // 创建上传处理器
-        ServletFileUpload upload = new ServletFileUpload(factory);
+        JakartaServletFileUpload upload = new JakartaServletFileUpload(factory);
         if(callback != null) {
             // 创建进度监听器
             ProgressListener progressListener = new ProgressListener() {
@@ -55,11 +58,9 @@ public class ProgressUploadFileKit {
                     //判断如果是安全文件 才写入磁盘
                     if(isSafeFile(originFileName)){
                         String newFileName = ProgressUploadFileConfig.getRenameFunc().call(finalUploadPath, originFileName);
-                        String filePath = finalUploadPath + File.separator + newFileName;
-                        File storeFile = new File(filePath);
-                        // 保存文件到硬盘
-                        fileItem.write(storeFile);
-                        progressFile = new UploadFile(parameterName, finalUploadPath, storeFile.getName(), originFileName, fileItem.getContentType());
+                        Path filePath = FileSystems.getDefault().getPath(finalUploadPath, newFileName);
+                        fileItem.write(filePath);
+                        progressFile = new UploadFile(parameterName, finalUploadPath, newFileName, originFileName, fileItem.getContentType());
                     }
                 }
 

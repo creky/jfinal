@@ -26,6 +26,7 @@ import com.jfinal.kit.PathKit;
 import com.jfinal.plugin.IPlugin;
 import com.jfinal.render.RenderManager;
 import com.jfinal.server.IServer;
+import com.jfinal.server.undertow.UndertowServer;
 import com.jfinal.token.ITokenCache;
 import com.jfinal.token.TokenManager;
 import com.jfinal.upload.UploadConfig;
@@ -153,16 +154,18 @@ public final class JFinal {
 	}
 	
 	public static void start() {
-		server = com.jfinal.server.jetty.ServerFactory.getServer();
-		server.start();
+		//FIXME
+		me();
 	}
 	
 	/**
 	 * 用于在 Eclipse 中，通过创建 main 方法的方式启动项目，支持热加载
 	 */
 	public static void start(String webAppDir, int port, String context, int scanIntervalSeconds) {
-		server = com.jfinal.server.jetty.ServerFactory.getServer(webAppDir, port, context, scanIntervalSeconds);
-		server.start();
+		//FIXME
+//		server = com.jfinal.server.jetty.ServerFactory.getServer(webAppDir, port, context, scanIntervalSeconds);
+//		server.start();
+		me();
 	}
 	
 	/**
@@ -198,19 +201,7 @@ public final class JFinal {
 	 */
 	public static void main(String[] args) {
 		if (args == null || args.length == 0) {
-			server = com.jfinal.server.jetty.ServerFactory.getServer();
-			server.start();
-			return ;
-		}
-		
-		// for Eclipse
-		if (args.length == 4) {
-			String webAppDir = args[0];
-			int port = Integer.parseInt(args[1]);
-			String context = args[2];
-			int scanIntervalSeconds = Integer.parseInt(args[3]);
-			server = com.jfinal.server.jetty.ServerFactory.getServer(webAppDir, port, context, scanIntervalSeconds);
-			server.start();
+			me();
 			return ;
 		}
 		

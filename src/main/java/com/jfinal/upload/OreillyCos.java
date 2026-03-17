@@ -16,7 +16,8 @@
 
 package com.jfinal.upload;
 
-import com.oreilly.servlet.multipart.FileRenamePolicy;
+
+import com.jfinal.cos.multipart.FileRenamePolicy;
 
 /**
  * OreillyCos.

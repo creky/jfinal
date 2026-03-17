@@ -19,8 +19,13 @@ package com.jfinal.plugin.activerecord;
 import java.beans.FeatureDescriptor;
 import java.lang.reflect.Method;
 import java.util.Iterator;
+
+import jakarta.el.ELContext;
+import jakarta.el.ELResolver;
 import jakarta.servlet.ServletContext;
 import com.jfinal.kit.StrKit;
+import jakarta.servlet.jsp.JspApplicationContext;
+import jakarta.servlet.jsp.JspFactory;
 
 /**
  * ModelRecordElResolver

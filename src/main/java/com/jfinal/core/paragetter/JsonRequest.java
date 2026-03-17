@@ -19,6 +19,7 @@ package com.jfinal.core.paragetter;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
+import java.nio.charset.Charset;
 import java.security.Principal;
 import java.util.Collection;
 import java.util.Collections;
@@ -26,14 +27,8 @@ import java.util.Enumeration;
 import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
-import jakarta.servlet.AsyncContext;
-import jakarta.servlet.DispatcherType;
-import jakarta.servlet.RequestDispatcher;
-import jakarta.servlet.ServletContext;
-import jakarta.servlet.ServletException;
-import jakarta.servlet.ServletInputStream;
-import jakarta.servlet.ServletRequest;
-import jakarta.servlet.ServletResponse;
+
+import jakarta.servlet.*;
 import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -296,12 +291,6 @@ public class JsonRequest implements HttpServletRequest {
 	}
 
 	@Override
-	@SuppressWarnings("deprecation")
-	public String getRealPath(String path) {
-		return req.getRealPath(path);
-	}
-
-	@Override
 	public int getRemotePort() {
 		return req.getRemotePort();
 	}
@@ -482,12 +471,6 @@ public class JsonRequest implements HttpServletRequest {
 	}
 
 	@Override
-	@SuppressWarnings("deprecation")
-	public boolean isRequestedSessionIdFromUrl() {
-		return req.isRequestedSessionIdFromUrl();
-	}
-
-	@Override
 	public boolean authenticate(HttpServletResponse response) throws IOException, ServletException {
 		return req.authenticate(response);
 	}
@@ -515,6 +498,21 @@ public class JsonRequest implements HttpServletRequest {
 	@Override
 	public <T extends HttpUpgradeHandler> T upgrade(Class<T> handlerClass) throws IOException, ServletException {
 		return req.upgrade(handlerClass);
+	}
+
+	@Override
+	public String getRequestId() {
+		return req.getRequestId();
+	}
+
+	@Override
+	public String getProtocolRequestId() {
+		return req.getProtocolRequestId();
+	}
+
+	@Override
+	public ServletConnection getServletConnection() {
+		return req.getServletConnection();
 	}
 }
 

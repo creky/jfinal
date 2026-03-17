@@ -21,6 +21,8 @@ import java.util.Arrays;
 import java.util.Objects;
 import java.util.Set;
 import java.util.TreeSet;
+
+import com.jfinal.cos.multipart.FileRenamePolicy;
 import com.jfinal.kit.PathKit;
 import com.jfinal.kit.StrKit;
 
@@ -125,7 +127,7 @@ public class UploadConfig {
 		return encoding;
 	}
 
-	public static void setFileRenamePolicy(com.oreilly.servlet.multipart.FileRenamePolicy fileRenamePolicy) {
+	public static void setFileRenamePolicy(FileRenamePolicy fileRenamePolicy) {
 		Objects.requireNonNull(fileRenamePolicy, "fileRenamePolicy can not be null.");
 		MultipartRequest.fileRenamePolicy = fileRenamePolicy;
 	}

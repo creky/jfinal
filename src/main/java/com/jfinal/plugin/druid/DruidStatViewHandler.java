@@ -116,12 +116,13 @@ public class DruidStatViewHandler extends Handler {
 	        if ("/submitLogin".equals(path)) {
 	            String usernameParam = request.getParameter(PARAM_NAME_USERNAME);
 	            String passwordParam = request.getParameter(PARAM_NAME_PASSWORD);
-	            if (username.equals(usernameParam) && password.equals(passwordParam)) {
+				//FIXME username and password not define.
+	            /*if (username.equals(usernameParam) && password.equals(passwordParam)) {
 	                request.getSession().setAttribute(SESSION_USER_KEY, username);
 	                response.getWriter().print("success");
 	            } else {
 	                response.getWriter().print("error");
-	            }
+	            }*/
 	            return;
 	        }
 

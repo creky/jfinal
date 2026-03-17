@@ -107,6 +107,18 @@
 			<version>6.2.0-M1</version>
 			<scope>provided</scope>
 		</dependency>
+		<dependency>
+			<groupId>jakarta.el</groupId>
+			<artifactId>jakarta.el-api</artifactId>
+			<version>6.1.0-M1</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>jakarta.servlet.jsp</groupId>
+			<artifactId>jakarta.servlet.jsp-api</artifactId>
+			<version>4.1.0-M1</version>
+			<scope>compile</scope>
+		</dependency>
 		<!-- jetty-server 开发时支持 JSP -->
 		<!--dependency>
 			<groupId>org.eclipse.jetty</groupId>
@@ -116,18 +128,24 @@
 		</dependency-->
 
 		<!-- cos 文件上传 -->
-		<dependency>
+		<!--<dependency>
 			<groupId>com.jfinal</groupId>
 			<artifactId>cos</artifactId>
 			<version>2022.2</version>
 			<scope>provided</scope>
-		</dependency>
+		</dependency>-->
 
 		<!-- common fileupload 文件上传 -->
-		<dependency>
+		<!--<dependency>
 			<groupId>commons-fileupload</groupId>
 			<artifactId>commons-fileupload</artifactId>
 			<version>1.5</version>
+			<scope>provided</scope>
+		</dependency>-->
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-fileupload2-jakarta-servlet6</artifactId>
+			<version>2.0.0-M5</version>
 			<scope>provided</scope>
 		</dependency>
 
