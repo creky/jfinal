@@ -97,18 +97,6 @@ public class SessionInViewInterceptor implements Interceptor {
 			return session.getServletContext();
 		}
 		
-		public javax.servlet.http.HttpSessionContext getSessionContext() {
-			return session.getSessionContext();
-		}
-		
-		public Object getValue(String key) {
-			return session.getValue(key);
-		}
-		
-		public String[] getValueNames() {
-			return session.getValueNames();
-		}
-		
 		public void invalidate() {
 			session.invalidate();
 		}
@@ -117,18 +105,10 @@ public class SessionInViewInterceptor implements Interceptor {
 			return session.isNew();
 		}
 		
-		public void putValue(String key, Object value) {
-			session.putValue(key, value);
-		}
-		
 		public void removeAttribute(String key) {
 			session.removeAttribute(key);
 		}
-		
-		public void removeValue(String key) {
-			session.removeValue(key);
-		}
-		
+
 		public void setAttribute(String key, Object value) {
 			session.setAttribute(key, value);
 		}

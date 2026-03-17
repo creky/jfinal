@@ -22,7 +22,7 @@ import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.util.concurrent.ThreadLocalRandom;
-import jakarta.imageio.ImageIO;
+import javax.imageio.ImageIO;
 import jakarta.servlet.ServletOutputStream;
 import jakarta.servlet.http.Cookie;
 import com.jfinal.core.Controller;

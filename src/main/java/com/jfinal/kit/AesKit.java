@@ -3,9 +3,9 @@ package com.jfinal.kit;
 import java.nio.charset.Charset;
 import java.util.Arrays;
 
-import jakarta.crypto.Cipher;
-import jakarta.crypto.spec.IvParameterSpec;
-import jakarta.crypto.spec.SecretKeySpec;
+import javax.crypto.Cipher;
+import javax.crypto.spec.IvParameterSpec;
+import javax.crypto.spec.SecretKeySpec;
 
 /**
  * 完全兼容微信所使用的AES加密方式。

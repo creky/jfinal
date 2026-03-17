@@ -16,22 +16,20 @@
 
 package com.jfinal.captcha;
 
-import java.awt.BasicStroke;
-import java.awt.Color;
-import java.awt.Font;
-import java.awt.Graphics2D;
-import java.awt.RenderingHints;
-import java.awt.geom.QuadCurve2D;
-import java.awt.image.BufferedImage;
-import java.io.IOException;
-import java.util.concurrent.ThreadLocalRandom;
-import jakarta.imageio.ImageIO;
 import com.jfinal.core.Controller;
 import com.jfinal.kit.LogKit;
 import com.jfinal.kit.StrKit;
 import com.jfinal.render.Render;
 import com.jfinal.render.RenderException;
+import jakarta.servlet.ServletOutputStream;
 import jakarta.servlet.http.Cookie;
+
+import javax.imageio.ImageIO;
+import java.awt.*;
+import java.awt.geom.QuadCurve2D;
+import java.awt.image.BufferedImage;
+import java.io.IOException;
+import java.util.concurrent.ThreadLocalRandom;
 
 /**
  * CaptchaRender.

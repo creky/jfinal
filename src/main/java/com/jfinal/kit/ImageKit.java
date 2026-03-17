@@ -21,7 +21,7 @@ import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.IOException;
 
-import jakarta.imageio.ImageIO;
+import javax.imageio.ImageIO;
 
 public class ImageKit {
     private ImageKit() {
